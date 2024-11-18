@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfTasks.Task2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задание 2: Калькулятор" Height="250" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Операнд 1:" Margin="0,0,10,0"/>
+            <TextBox x:Name="textBoxOperand1" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Операнд 2:" Margin="0,0,10,0"/>
+            <TextBox x:Name="textBoxOperand2" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Text="Операция (+, -, *, /):" Margin="0,0,10,0"/>
+            <TextBox x:Name="textBoxSign" Width="50"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" Content="Вычислить" Click="ButtonCalculate_Click" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+
+        <TextBlock x:Name="textBlockResult" TextWrapping="Wrap" Grid.Row="4" TextAlignment="Center" FontSize="16" Margin="0,10,0,0"/>
+
+    </Grid>
+</Window>
